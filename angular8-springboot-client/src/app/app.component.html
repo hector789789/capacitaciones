@@ -1,0 +1,38 @@
+<div class="container">
+  
+  
+</div><div class="nav-side-menu">
+  <div class="brand">Administración Plataforma</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+                <li class="nav-item">
+                  <a routerLink="students" class="nav-link" routerLinkActive="active">Listar estudiante</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="add" class="nav-link" routerLinkActive="active">Ingresar estudiante</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="details/:id" class="nav-link" routerLinkActive="active">Buscar estudiante</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="update/:id" class="nav-link" routerLinkActive="active">Actualizar estudiante</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="delete/:id" class="nav-link" routerLinkActive="active">Eliminar estudiante</a>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+ 
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

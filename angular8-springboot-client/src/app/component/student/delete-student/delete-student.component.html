@@ -1,0 +1,18 @@
+<h3>Eliminar un estudiante</h3>
+<div [hidden]="submitted" style="width: 400px;" >
+  <form (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+      
+      <input type="number" class="form-control" id="dni" required [(ngModel)]="student.dni" name="identificacion" 
+      placeholder="Ingrese el dni del estudiante">
+      
+    </div>
+
+    <button type="submit"  class="btn btn-primary">Eliminar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

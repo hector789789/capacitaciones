@@ -1,0 +1,31 @@
+<h2>Búsqueda de estudiante</h2> 
+<br>
+<form class="needs-validation" novalidate  (ngSubmit)="onSubmit()" [formGroup]="formSearchStuden">
+  <div class="form-row">
+    <div class="col-md-4 mb-3 md-form">
+      <label for="validationCustom012">Identificación</label>
+      <input [class.is-invalid] = "formCreateStuden.get('dni').touched && formCreateStuden.get('dni').invalid" type="number" class="form-control" required [(ngModel)]="student.dni" id="dni" formControlName="dni">
+      <div class="invalid-feedback">
+        Por favor ingrese el dni del estudiante.
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+  <button class="btn btn-primary btn-sm btn-rounded" type="submit">Buscar estudiante</button>
+</form>
+
+<hr/>
+<br><br>
+<div *ngIf="student">
+  <div>
+    <label><b>Nombres: </b></label>   {{student.firstName}}
+  </div>
+  <div>
+    <label><b>Apellidos: </b></label>   {{student.lastName}}
+  </div>
+  <div>
+    <label><b>Email: </b></label>    {{student.emailId}}
+  </div>  
+</div>
+
+<br>
